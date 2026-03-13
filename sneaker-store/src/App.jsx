@@ -31,13 +31,7 @@ function App() {
 
   return (
     <>
-      <Navbar/>
-
-      <ProductCard
-        key={product.id}
-        product={product}
-        addToCart={addToCart}
-      />
+      <Navbar cartCount={cart.reduce((sum, item) => sum + item.qty, 0)}/>
 
       <Routes>
 
@@ -51,9 +45,9 @@ function App() {
 
             <div style={{
               display:"grid",
-              gridTemplateColumns:"repeat(4,1fr)",
+              gridTemplateColumns:"repeat(auto-fill, minmax(220px, 1fr))",
               gap:"30px",
-              padding:"40px 80px"
+              padding:"40px 60px"
             }}>
 
             {products
@@ -61,7 +55,7 @@ function App() {
                 brandFilter==="All" || product.brand===brandFilter
               )
               .map((product)=>(
-                <ProductCard key={product.id} product={product}/>
+                <ProductCard key={product.id} product={product} addToCart={addToCart}/>
             ))}
 
             </div>
@@ -84,7 +78,7 @@ function App() {
           </>
         }/>
 
-        <Route path="/product/:id" element={<ProductDetail/>} />
+        <Route path="/product/:id" element={<ProductDetail addToCart={addToCart}/>} />
 
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
 

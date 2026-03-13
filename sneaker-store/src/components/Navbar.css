@@ -9,9 +9,14 @@
   position:sticky;
   top:0;
   z-index:1000;
+  box-sizing:border-box;
+  margin:0;
+  border:none;
+  outline:none;
+  line-height:normal;
 }
 
-.logo{
+.navbar-logo{
   font-size:22px;
   font-weight:700;
   letter-spacing:1px;
@@ -22,6 +27,8 @@
   list-style:none;
   gap:35px;
   font-size:15px;
+  margin:0;
+  padding:0;
 }
 
 .nav-links li{
@@ -34,8 +41,45 @@
 }
 
 .nav-icons{
-  font-size:18px;
+  font-size:22px;
   display:flex;
   gap:20px;
   cursor:pointer;
+  align-items:center;
+}
+
+.nav-icons a{
+  color:white;
+  text-decoration:none;
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-links {
+    gap: 16px;
+    font-size: 13px;
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 10px;
+    font-size: 12px;
+  }
 }

@@ -18,11 +18,13 @@
 .product-card h3{
   margin-top:15px;
   font-size:18px;
+  color:#213547;
 }
 
 .price{
   margin:10px 0;
   font-weight:bold;
+  color:#213547;
 }
 
 .product-card button{
@@ -32,6 +34,11 @@
   color:white;
   border-radius:6px;
   cursor:pointer;
+  margin-top:8px;
+}
+
+.product-card button:hover{
+  background:#333;
 }
 
 .product-card:hover{
