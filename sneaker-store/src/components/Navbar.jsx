@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom"
 
-function Navbar({ cartCount }) {
+function Navbar({ cartCount, user, logout }) {
   return (
     <nav className='navbar'>
         <div className='navbar-logo'>
@@ -37,6 +37,15 @@ function Navbar({ cartCount }) {
               </span>
             )}
           </Link>
+
+          {user ? (
+            <div className="nav-user">
+              <span className="nav-username">👤 {user.name}</span>
+              <button className="nav-logout-btn" onClick={logout}>Đăng xuất</button>
+            </div>
+          ) : (
+            <Link to="/login" className="nav-login-btn">Đăng nhập</Link>
+          )}
         </div>
     </nav>
   )

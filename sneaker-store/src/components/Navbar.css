@@ -61,7 +61,47 @@
   text-decoration:none;
 }
 
-@media (max-width: 768px) {
+.nav-login-btn {
+  padding: 7px 16px;
+  background: white;
+  color: black;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.nav-login-btn:hover {
+  opacity: 0.85;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-username {
+  font-size: 13px;
+  color: white;
+}
+
+.nav-logout-btn {
+  padding: 6px 14px;
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.nav-logout-btn:hover {
+  border-color: white;
+}
   .navbar {
     padding: 14px 20px;
     flex-wrap: wrap;
@@ -75,7 +115,7 @@
     width: 100%;
     justify-content: center;
   }
-}
+
 
 @media (max-width: 480px) {
   .nav-links {

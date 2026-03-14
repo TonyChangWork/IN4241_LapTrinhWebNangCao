@@ -6,11 +6,22 @@ import { useState } from "react"
 import { Routes, Route } from "react-router-dom"
 import ProductDetail from "./pages/ProductDetail"
 import Cart from "./components/Cart"
+import Login from "./pages/Login"
+import Register from "./pages/Register"
 
 function App() {
 
   const [brandFilter, setBrandFilter] = useState("All")
   const [cart, setCart] = useState([])
+  const [user, setUser] = useState(() => {
+    const saved = localStorage.getItem("user")
+    return saved ? JSON.parse(saved) : null
+  })
+
+  const logout = () => {
+    localStorage.removeItem("user")
+    setUser(null)
+  }
   const addToCart = (product) => {
 
   const exist = cart.find(item => item.id === product.id)
@@ -31,7 +42,7 @@ function App() {
 
   return (
     <>
-      <Navbar cartCount={cart.reduce((sum, item) => sum + item.qty, 0)}/>
+      <Navbar cartCount={cart.reduce((sum, item) => sum + item.qty, 0)} user={user} logout={logout}/>
 
       <Routes>
 
@@ -80,6 +91,8 @@ function App() {
 
         <Route path="/product/:id" element={<ProductDetail addToCart={addToCart}/>} />
 
+        <Route path="/login" element={<Login setUser={setUser}/>} />
+        <Route path="/register" element={<Register />} />
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
 
       </Routes>
