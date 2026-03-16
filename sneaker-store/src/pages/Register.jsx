@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import "./Auth.css"
+import axios from "axios"
 
 function Register() {
   const navigate = useNavigate()
@@ -33,14 +34,21 @@ function Register() {
       return
     }
 
-    setLoading(true)
 
-    // Giả lập gọi API — sau này thay bằng fetch ASP.NET
-    setTimeout(() => {
+    setLoading(true)
+    try {
+      await axios.post("https://localhost:7178/api/auth/register", {
+        name: form.name,
+        email: form.email,
+        password: form.password
+      })
       setSuccess(true)
-      setLoading(false)
       setTimeout(() => navigate("/login"), 1500)
-    }, 800)
+    } catch (err) {
+      setErrors({ general: err.response?.data?.message || "Đăng ký thất bại." })
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
