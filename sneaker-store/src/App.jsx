@@ -9,6 +9,8 @@ import Cart from "./components/Cart"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Checkout from "./pages/Checkout"
+import Footer from "./components/Footer"
+import OrderHistory from "./pages/OrderHistory"
 import axios from "axios"
 
 const API_URL = "https://localhost:7178"
@@ -16,6 +18,7 @@ const API_URL = "https://localhost:7178"
 function App() {
 
   const [brandFilter, setBrandFilter] = useState("All")
+  const [searchTerm, setSearchTerm] = useState("")
   const [cart, setCart] = useState([])
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
@@ -59,9 +62,10 @@ function App() {
 }
 
   return (
-    <>
-      <Navbar cartCount={cart.reduce((sum, item) => sum + item.qty, 0)} user={user} logout={logout}/>
+    <div style={{ display:"flex", flexDirection:"column", minHeight:"100vh" }}>
+      <Navbar cartCount={cart.reduce((sum, item) => sum + item.qty, 0)} user={user} logout={logout} onSearch={setSearchTerm} products={products}/>
 
+      <div style={{ flex:1 }}>
       <Routes>
 
         <Route path="/" element={
@@ -85,7 +89,8 @@ function App() {
               }}>
                 {products
                   .filter(product =>
-                    brandFilter === "All" || product.brand === brandFilter
+                    (brandFilter === "All" || product.brand === brandFilter) &&
+                    (searchTerm === "" || product.name.toLowerCase().includes(searchTerm.toLowerCase()))
                   )
                   .map(product => (
                     <ProductCard key={product.id} product={product} addToCart={addToCart}/>
@@ -102,11 +107,13 @@ function App() {
         <Route path="/login" element={<Login setUser={setUser}/>} />
         <Route path="/register" element={<Register />} />
         <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} user={user}/>} />
+        <Route path="/orders" element={<OrderHistory user={user}/>} />
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart}/>} />
 
       </Routes>
-
-    </>
+      </div>
+      <Footer/>
+    </div>
   )
 }
 

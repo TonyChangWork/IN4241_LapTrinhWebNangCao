@@ -1,0 +1,267 @@
+.pd-loading {
+  padding: 80px;
+  text-align: center;
+  color: #888;
+  font-size: 16px;
+}
+
+.pd-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 60px 80px;
+}
+
+.pd-breadcrumb {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 32px;
+}
+
+.pd-breadcrumb-link {
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.pd-breadcrumb-link:hover {
+  color: #111;
+}
+
+.pd-container {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.pd-image-wrap {
+  flex: 1;
+  background: #f5f5f5;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  max-width: 500px;
+}
+
+.pd-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.pd-image:hover {
+  transform: scale(1.04);
+}
+
+.pd-info {
+  flex: 1;
+  padding-top: 8px;
+}
+
+.pd-brand {
+  font-size: 13px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 8px;
+}
+
+.pd-name {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111;
+  margin: 0 0 16px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.pd-price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 20px;
+}
+
+.pd-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0 0 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #eee;
+}
+
+.pd-section {
+  margin-bottom: 24px;
+}
+
+.pd-section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pd-size-error {
+  font-size: 12px;
+  color: #e53e3e;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.pd-sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pd-size-btn {
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s;
+  color: #111;
+}
+
+.pd-size-btn:hover {
+  border-color: #111;
+}
+
+.pd-size-btn.active {
+  background: #111;
+  color: white;
+  border-color: #111;
+}
+
+.pd-qty {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  width: fit-content;
+  overflow: hidden;
+}
+
+.pd-qty-btn {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #111;
+  transition: background 0.15s;
+  font-family: inherit;
+}
+
+.pd-qty-btn:hover {
+  background: #f5f5f5;
+}
+
+.pd-qty-val {
+  width: 40px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  border-left: 1.5px solid #e0e0e0;
+  border-right: 1.5px solid #e0e0e0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pd-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.pd-add-btn {
+  flex: 1;
+  padding: 14px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pd-add-btn:hover {
+  background: #333;
+}
+
+.pd-add-btn.added {
+  background: #22c55e;
+}
+
+.pd-buy-btn {
+  flex: 1;
+  padding: 14px;
+  background: white;
+  color: #111;
+  border: 1.5px solid #111;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pd-buy-btn:hover {
+  background: #f5f5f5;
+}
+
+.pd-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.pd-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .pd-page {
+    padding: 20px;
+  }
+
+  .pd-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .pd-image-wrap {
+    max-width: 100%;
+  }
+
+  .pd-name {
+    font-size: 24px;
+  }
+}

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import axios from "axios"
+import { formatVND } from "../utils/currency"
 import "./Checkout.css"
 
 const API_URL = "https://localhost:7178"
@@ -135,7 +136,7 @@ function Checkout({ cart, setCart, user }) {
           {errors.general && <p className="error-msg">{errors.general}</p>}
 
           <button type="submit" className="place-order-btn" disabled={loading || !user}>
-            {loading ? "Đang xử lý..." : `Đặt hàng • $${total}`}
+            {loading ? "Đang xử lý..." : `Đặt hàng • ${formatVND(total)}`}
           </button>
         </form>
       </div>
@@ -152,7 +153,7 @@ function Checkout({ cart, setCart, user }) {
                 <p className="checkout-item-brand">{item.brand}</p>
                 <p className="checkout-item-qty">x{item.qty}</p>
               </div>
-              <span className="checkout-item-price">${item.price * item.qty}</span>
+              <span className="checkout-item-price">{formatVND(item.price * item.qty)}</span>
             </div>
           ))}
         </div>
@@ -160,7 +161,7 @@ function Checkout({ cart, setCart, user }) {
         <div className="checkout-summary">
           <div className="summary-row">
             <span>Tạm tính</span>
-            <span>${total}</span>
+            <span>{formatVND(total)}</span>
           </div>
           <div className="summary-row">
             <span>Phí giao hàng</span>
@@ -168,7 +169,7 @@ function Checkout({ cart, setCart, user }) {
           </div>
           <div className="summary-row total">
             <span>Tổng cộng</span>
-            <span>${total}</span>
+            <span>{formatVND(total)}</span>
           </div>
         </div>
       </div>
