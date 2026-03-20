@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import "./Auth.css"
 import axios from "axios"
+import { toast } from "react-hot-toast"
 
 function Login({ setUser }) {
   const navigate = useNavigate()
@@ -23,25 +24,14 @@ function Login({ setUser }) {
     }
 
     setLoading(true)
-    try {
-      const res = await axios.post("https://localhost:7178/api/auth/login", {
-        email: form.email,
-        password: form.password
-      })
-      const userData = res.data.user
-      localStorage.setItem("user", JSON.stringify(userData))
-      setUser(userData)
-      navigate("/")
-    } catch (err) {
-      setError(err.response?.data?.message || "Email hoặc mật khẩu không đúng.")
-    } finally {
-      setLoading(false)
-    }
+
+    // Giả lập gọi API — sau này thay bằng fetch ASP.NET
     setTimeout(() => {
       if (form.email === "admin@sneaker.com" && form.password === "123456") {
         const userData = { email: form.email, name: "Admin" }
         localStorage.setItem("user", JSON.stringify(userData))
         setUser(userData)
+        toast.success(`Chào mừng ${userData.name}!`, { duration: 2500, position: "bottom-right" })
         navigate("/")
       } else {
         setError("Email hoặc mật khẩu không đúng.")

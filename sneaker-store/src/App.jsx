@@ -12,6 +12,7 @@ import Checkout from "./pages/Checkout"
 import Footer from "./components/Footer"
 import OrderHistory from "./pages/OrderHistory"
 import axios from "axios"
+import { Toaster, toast } from "react-hot-toast"
 
 const API_URL = "https://localhost:7178"
 
@@ -44,25 +45,24 @@ function App() {
       })
   }, [])
   const addToCart = (product) => {
-
-  const exist = cart.find(item => item.id === product.id)
-
-  if(exist){
-    setCart(
-      cart.map(item =>
-        item.id === product.id
-          ? {...item, qty: item.qty + 1}
-          : item
-      )
-    )
-  }else{
-    setCart([...cart, {...product, qty:1}])
+    const exist = cart.find(item => item.id === product.id)
+    if(exist){
+      setCart(cart.map(item =>
+        item.id === product.id ? {...item, qty: item.qty + 1} : item
+      ))
+    } else {
+      setCart([...cart, {...product, qty:1}])
+    }
+    toast.success(`Đã thêm ${product.name} vào giỏ!`, {
+      duration: 2000,
+      position: "bottom-right",
+      style: { fontFamily: "Inter, sans-serif", fontSize: "14px" }
+    })
   }
-
-}
 
   return (
     <div style={{ display:"flex", flexDirection:"column", minHeight:"100vh" }}>
+      <Toaster/>
       <Navbar cartCount={cart.reduce((sum, item) => sum + item.qty, 0)} user={user} logout={logout} onSearch={setSearchTerm} products={products}/>
 
       <div style={{ flex:1 }}>

@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom"
 import axios from "axios"
 import { formatVND } from "../utils/currency"
 import "./Checkout.css"
+import { toast } from "react-hot-toast"
 
 const API_URL = "https://localhost:7178"
 
@@ -59,6 +60,7 @@ function Checkout({ cart, setCart, user }) {
       setOrderId(res.data.orderId)
       setSuccess(true)
       setCart([])
+      toast.success("Đặt hàng thành công!", { duration: 3000, position: "bottom-right" })
     } catch (err) {
       console.error("Lỗi đặt hàng:", err)
       setErrors({ general: "Đặt hàng thất bại, vui lòng thử lại." })
