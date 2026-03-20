@@ -1,8 +1,108 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<SneakerAdmin.Models.Order>
+
+@{
+    ViewData["Title"] = "Dashboard";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h2 class="mb-4">Dashboard</h2>
+
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card text-white bg-dark mb-3">
+            <div class="card-body">
+                <h6 class="card-title">Tổng doanh thu</h6>
+                <h3>@String.Format("{0:N0} ₫", ViewBag.TotalRevenue)</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-body">
+                <h6 class="card-title">Tổng đơn hàng</h6>
+                <h3>@ViewBag.TotalOrders</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-body">
+                <h6 class="card-title">Tổng người dùng</h6>
+                <h3>@ViewBag.TotalUsers</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-body">
+                <h6 class="card-title">Chờ xác nhận</h6>
+                <h3>@ViewBag.PendingOrders</h3>
+            </div>
+        </div>
+    </div>
 </div>
+
+<h4 class="mb-3">Đơn hàng gần nhất</h4>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Khách hàng</th>
+            <th>SĐT</th>
+            <th>Địa chỉ</th>
+            <th>Tổng tiền</th>
+            <th>Ngày đặt</th>
+            <th>Trạng thái</th>
+            <th>Cập nhật</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>#@order.Id</td>
+                <td>@(order.User?.Name ?? "N/A")</td>
+                <td>@order.Phone</td>
+                <td>@order.Address</td>
+                <td>@String.Format("{0:N0} ₫", order.Total)</td>
+                <td>@order.OrderDate.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>
+                    @{
+                        var badgeClass = order.Status switch
+                        {
+                            "pending" => "bg-warning text-dark",
+                            "confirmed" => "bg-primary",
+                            "shipping" => "bg-info text-dark",
+                            "delivered" => "bg-success",
+                            "cancelled" => "bg-danger",
+                            _ => "bg-secondary"
+                        };
+                        var statusLabel = order.Status switch
+                        {
+                            "pending" => "Chờ xác nhận",
+                            "confirmed" => "Đã xác nhận",
+                            "shipping" => "Đang giao",
+                            "delivered" => "Đã giao",
+                            "cancelled" => "Đã huỷ",
+                            _ => order.Status
+                        };
+                    }
+                    <span class="badge @badgeClass">@statusLabel</span>
+                </td>
+                <td>
+                    <form asp-action="UpdateOrderStatus" method="get" class="d-flex gap-1">
+                        <input type="hidden" name="id" value="@order.Id" />
+                        <select name="status" class="form-select form-select-sm">
+                            <option value="pending" selected="@(order.Status == "pending")">Chờ xác nhận</option>
+                            <option value="confirmed" selected="@(order.Status == "confirmed")">Đã xác nhận</option>
+                            <option value="shipping" selected="@(order.Status == "shipping")">Đang giao</option>
+                            <option value="delivered" selected="@(order.Status == "delivered")">Đã giao</option>
+                            <option value="cancelled" selected="@(order.Status == "cancelled")">Đã huỷ</option>
+                        </select>
+                        <button type="submit" class="btn btn-sm btn-dark">Lưu</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

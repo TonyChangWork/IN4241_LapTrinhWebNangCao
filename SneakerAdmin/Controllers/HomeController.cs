@@ -1,32 +1,45 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using SneakerAdmin.Models;
+using Microsoft.EntityFrameworkCore;
+using SneakerAdmin.Data;
 
 namespace SneakerAdmin.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(AppDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            ViewBag.TotalRevenue = await _context.Orders.SumAsync(o => o.Total);
+            ViewBag.TotalOrders = await _context.Orders.CountAsync();
+            ViewBag.TotalUsers = await _context.Users.CountAsync();
+            ViewBag.TotalProducts = await _context.Products.CountAsync();
+            ViewBag.PendingOrders = await _context.Orders.CountAsync(o => o.Status == "pending");
+
+            var recentOrders = await _context.Orders
+                .Include(o => o.User)
+                .Include(o => o.Items)
+                .OrderByDescending(o => o.OrderDate)
+                .Take(10)
+                .ToListAsync();
+
+            return View(recentOrders);
         }
 
-        public IActionResult Privacy()
+        public async Task<IActionResult> UpdateOrderStatus(int id, string status)
         {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var order = await _context.Orders.FindAsync(id);
+            if (order != null)
+            {
+                order.Status = status;
+                await _context.SaveChangesAsync();
+            }
+            return RedirectToAction(nameof(Index));
         }
     }
 }
