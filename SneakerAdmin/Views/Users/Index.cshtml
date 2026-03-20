@@ -1,0 +1,39 @@
+﻿@model IEnumerable<SneakerAdmin.Models.User>
+
+@{
+    ViewData["Title"] = "Quản lý người dùng";
+}
+
+<h2 class="mb-3">Danh sách người dùng</h2>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Họ tên</th>
+            <th>Email</th>
+            <th>Vai trò</th>
+            <th>Ngày đăng ký</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.Name</td>
+                <td>@user.Email</td>
+                <td>
+                    <span class="badge @(user.Role == "admin" ? "bg-danger" : "bg-secondary")">
+                        @user.Role
+                    </span>
+                </td>
+                <td>@user.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@user.Id" class="btn btn-sm btn-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
