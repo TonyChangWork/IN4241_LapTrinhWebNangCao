@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import ProductCard from "./components/ProductCard"
+import BrandFilter from "./components/BrandFilter"
 import { useState, useEffect } from "react"
 import { Routes, Route } from "react-router-dom"
 import ProductDetail from "./pages/ProductDetail"
@@ -12,6 +13,7 @@ import axios from "axios"
 const API_URL = "https://localhost:7178"
 
 function App() {
+
   const [brandFilter, setBrandFilter] = useState("All")
   const [cart, setCart] = useState([])
   const [products, setProducts] = useState([])
@@ -37,30 +39,37 @@ function App() {
         setLoading(false)
       })
   }, [])
-
   const addToCart = (product) => {
-    const exist = cart.find(item => item.id === product.id)
-    if (exist) {
-      setCart(cart.map(item =>
+
+  const exist = cart.find(item => item.id === product.id)
+
+  if(exist){
+    setCart(
+      cart.map(item =>
         item.id === product.id
-          ? { ...item, qty: item.qty + 1 }
+          ? {...item, qty: item.qty + 1}
           : item
-      ))
-    } else {
-      setCart([...cart, { ...product, qty: 1 }])
-    }
+      )
+    )
+  }else{
+    setCart([...cart, {...product, qty:1}])
   }
+
+}
 
   return (
     <>
       <Navbar cartCount={cart.reduce((sum, item) => sum + item.qty, 0)} user={user} logout={logout}/>
 
       <Routes>
+
         <Route path="/" element={
           <>
             <Hero/>
 
-            <h2 style={{ textAlign:"center", marginTop:"40px" }}>
+            <BrandFilter active={brandFilter} onChange={setBrandFilter}/>
+
+            <h2 style={{textAlign:"center", marginTop:"10px", marginBottom:"10px"}}>
               Trending Sneakers
             </h2>
 
@@ -71,7 +80,7 @@ function App() {
                 display:"grid",
                 gridTemplateColumns:"repeat(auto-fill, minmax(220px, 1fr))",
                 gap:"30px",
-                padding:"40px 60px"
+                padding:"20px 60px 60px"
               }}>
                 {products
                   .filter(product =>
@@ -84,27 +93,17 @@ function App() {
               </div>
             )}
 
-            <div style={{
-              display:"flex",
-              justifyContent:"center",
-              gap:"20px",
-              marginTop:"30px",
-              marginBottom:"40px"
-            }}>
-              <button onClick={() => setBrandFilter("All")}>All</button>
-              <button onClick={() => setBrandFilter("Nike")}>Nike</button>
-              <button onClick={() => setBrandFilter("Adidas")}>Adidas</button>
-              <button onClick={() => setBrandFilter("Puma")}>Puma</button>
-              <button onClick={() => setBrandFilter("Jordan")}>Jordan</button>
-            </div>
           </>
         }/>
 
-        <Route path="/product/:id" element={<ProductDetail addToCart={addToCart} apiUrl={API_URL}/>} />
-        <Route path="/cart" element={<Cart cart={cart} setCart={setCart}/>} />
+        <Route path="/product/:id" element={<ProductDetail addToCart={addToCart}/>} />
+
         <Route path="/login" element={<Login setUser={setUser}/>} />
-        <Route path="/register" element={<Register/>} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
+
       </Routes>
+
     </>
   )
 }

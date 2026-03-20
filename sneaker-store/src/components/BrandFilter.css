@@ -1,0 +1,97 @@
+.brand-filter-section {
+  padding: 50px 60px 30px;
+  background: #fff;
+}
+
+.brand-filter-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 28px;
+  letter-spacing: -0.5px;
+}
+
+.brand-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.brand-card {
+  background: #f5f5f5;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 90px;
+}
+
+.brand-card:hover {
+  background: #efefef;
+  border-color: #ddd;
+  transform: translateY(-2px);
+}
+
+.brand-card.active {
+  background: #fff;
+  border-color: #111;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.brand-logo {
+  width: 100%;
+  max-width: 100px;
+  height: 40px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+.brand-card:hover .brand-logo,
+.brand-card.active .brand-logo {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.brand-all-text {
+  font-size: 18px;
+  font-weight: 800;
+  color: #888;
+  letter-spacing: 2px;
+  transition: color 0.2s;
+}
+
+.brand-card:hover .brand-all-text,
+.brand-card.active .brand-all-text {
+  color: #111;
+}
+
+@media (max-width: 768px) {
+  .brand-filter-section {
+    padding: 30px 20px;
+  }
+
+  .brand-filter-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .brand-card {
+    height: 70px;
+    padding: 16px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-filter-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
