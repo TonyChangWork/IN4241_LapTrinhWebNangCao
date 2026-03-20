@@ -66,8 +66,7 @@
               "RelativeToolTip": "Controllers\\ProductsController.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAA9wCwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T18:03:51.033Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T18:03:51.033Z"
             },
             {
               "$type": "Document",
@@ -79,8 +78,7 @@
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAAE4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T18:03:15.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T18:03:15.125Z"
             },
             {
               "$type": "Document",
@@ -92,8 +90,7 @@
               "RelativeToolTip": "Migrations\\20260316175454_FixDecimalTypes.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T17:54:54.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T17:54:54.991Z"
             },
             {
               "$type": "Document",
@@ -105,8 +102,7 @@
               "RelativeToolTip": "Migrations\\20260316175212_InitialCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T17:52:12.558Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T17:52:12.558Z"
             },
             {
               "$type": "Document",
@@ -116,7 +112,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-16T17:32:42.404Z",
               "EditorCaption": ""
@@ -131,8 +127,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-16T17:32:25.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T17:32:25.125Z"
             },
             {
               "$type": "Document",
@@ -144,8 +139,7 @@
               "RelativeToolTip": "Data\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T17:30:37.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T17:30:37.973Z"
             },
             {
               "$type": "Document",
@@ -157,8 +151,7 @@
               "RelativeToolTip": "Models\\Order.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T17:28:24.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T17:28:24.187Z"
             },
             {
               "$type": "Document",
@@ -170,8 +163,7 @@
               "RelativeToolTip": "Models\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T17:28:07.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T17:28:07.729Z"
             },
             {
               "$type": "Document",
@@ -183,21 +175,19 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T17:27:54.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T17:27:54.652Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "SneakerAPI",
+              "Title": "SneakerAPI.csproj",
               "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAPI\\SneakerAPI.csproj",
               "RelativeDocumentMoniker": "SneakerAPI.csproj",
               "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAPI\\SneakerAPI.csproj",
               "RelativeToolTip": "SneakerAPI.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-16T17:27:16.488Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T17:27:16.488Z"
             }
           ]
         }
