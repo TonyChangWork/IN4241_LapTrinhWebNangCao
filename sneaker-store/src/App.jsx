@@ -11,6 +11,7 @@ import Register from "./pages/Register"
 import Checkout from "./pages/Checkout"
 import Footer from "./components/Footer"
 import OrderHistory from "./pages/OrderHistory"
+import NotFound from "./pages/NotFound"
 import axios from "axios"
 import { Toaster, toast } from "react-hot-toast"
 
@@ -109,6 +110,7 @@ function App() {
         <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} user={user}/>} />
         <Route path="/orders" element={<OrderHistory user={user}/>} />
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart}/>} />
+        <Route path="*" element={<NotFound/>} />
 
       </Routes>
       </div>

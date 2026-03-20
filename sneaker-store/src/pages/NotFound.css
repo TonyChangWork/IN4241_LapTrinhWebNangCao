@@ -1,0 +1,52 @@
+.nf-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: 40px;
+}
+
+.nf-content {
+  max-width: 480px;
+}
+
+.nf-code {
+  font-size: 120px;
+  font-weight: 800;
+  color: #111;
+  line-height: 1;
+  margin: 0 0 16px;
+  letter-spacing: -4px;
+}
+
+.nf-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 12px;
+}
+
+.nf-desc {
+  font-size: 15px;
+  color: #888;
+  line-height: 1.7;
+  margin: 0 0 32px;
+}
+
+.nf-btn {
+  padding: 12px 32px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nf-btn:hover {
+  background: #333;
+}
