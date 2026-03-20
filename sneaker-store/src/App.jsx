@@ -8,6 +8,7 @@ import ProductDetail from "./pages/ProductDetail"
 import Cart from "./components/Cart"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
+import Checkout from "./pages/Checkout"
 import axios from "axios"
 
 const API_URL = "https://localhost:7178"
@@ -100,7 +101,8 @@ function App() {
 
         <Route path="/login" element={<Login setUser={setUser}/>} />
         <Route path="/register" element={<Register />} />
-        <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
+        <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} user={user}/>} />
+        <Route path="/cart" element={<Cart cart={cart} setCart={setCart}/>} />
 
       </Routes>
 

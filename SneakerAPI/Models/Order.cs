@@ -11,6 +11,8 @@ namespace SneakerAPI.Models
         [Column(TypeName = "decimal(18,2)")]
         public decimal Total { get; set; }
         public string Status { get; set; } = "pending";
+        public string Address { get; set; } = "";
+        public string Phone { get; set; } = "";
         public List<OrderItem> Items { get; set; } = new();
     }
 

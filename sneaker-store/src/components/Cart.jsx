@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 function Cart({ cart, setCart }) {
+
+  const navigate = useNavigate()
 
   const increaseQty = (id) => {
     setCart(
@@ -96,7 +98,7 @@ function Cart({ cart, setCart }) {
               fontSize:"16px",
               cursor:"pointer"
             }}
-            onClick={() => alert("Tính năng Checkout sẽ được tích hợp với ASP.NET API!")}
+            onClick={() => navigate("/checkout")}
           >
             Thanh toán
           </button>
