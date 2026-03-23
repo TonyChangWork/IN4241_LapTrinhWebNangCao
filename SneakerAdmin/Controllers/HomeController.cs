@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SneakerAdmin.Data;
+using SneakerAdmin.Filters;
 
 namespace SneakerAdmin.Controllers
 {
+    [AdminAuthFilter]
     public class HomeController : Controller
     {
         private readonly AppDbContext _context;

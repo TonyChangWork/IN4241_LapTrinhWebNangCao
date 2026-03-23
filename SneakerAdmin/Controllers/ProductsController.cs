@@ -2,9 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using SneakerAdmin.Data;
 using SneakerAdmin.Models;
+using SneakerAdmin.Filters;
 
 namespace SneakerAdmin.Controllers
 {
+    [AdminAuthFilter]
     public class ProductsController : Controller
     {
         private readonly AppDbContext _context;

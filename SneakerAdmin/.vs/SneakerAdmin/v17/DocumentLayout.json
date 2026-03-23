@@ -3,16 +3,48 @@
   "WorkspaceRootPath": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\filters\\adminauthfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:filters\\adminauthfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\sneakeradmin.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:sneakeradmin.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,20 +55,8 @@
       "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\views\\users\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:views\\users\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\views\\products\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -53,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D36F646E-C907-4179-B770-58D8E401452B}|SneakerAdmin.csproj|d:\\in4241_laptrinhwebnangcao\\sneakeradmin\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,75 +94,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "AdminAuthFilter.cs",
+              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Filters\\AdminAuthFilter.cs",
+              "RelativeDocumentMoniker": "Filters\\AdminAuthFilter.cs",
+              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Filters\\AdminAuthFilter.cs",
+              "RelativeToolTip": "Filters\\AdminAuthFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T23:12:41.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SneakerAdmin",
+              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\SneakerAdmin.csproj",
+              "RelativeDocumentMoniker": "SneakerAdmin.csproj",
+              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\SneakerAdmin.csproj",
+              "RelativeToolTip": "SneakerAdmin.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-23T23:12:13.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-23T23:09:02.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T23:08:05.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAF8AAABxAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAF8AAAByAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-03-20T16:45:06.331Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAuwCwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-20T16:44:41.045Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Order.cs",
-              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "Models\\Order.cs",
-              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Models\\Order.cs",
-              "RelativeToolTip": "Models\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T16:40:09.576Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Users\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Users\\Index.cshtml",
-              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Users\\Index.cshtml",
-              "RelativeToolTip": "Views\\Users\\Index.cshtml",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAACQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-20T02:30:20.15Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "UsersController.cs",
               "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
               "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T02:29:18.458Z"
+              "WhenOpened": "2026-03-20T02:29:18.458Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Products\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\Products\\Delete.cshtml",
@@ -158,7 +201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Products\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Products\\Edit.cshtml",
@@ -170,7 +213,57 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T14:45:17.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-20T02:47:46.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Users\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\Index.cshtml",
+              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Users\\Index.cshtml",
+              "RelativeToolTip": "Views\\Users\\Index.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAACQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-20T02:30:20.15Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "Order.cs",
+              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Models\\Order.cs",
+              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Models\\Order.cs",
+              "RelativeToolTip": "Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T16:40:09.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Products\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Products\\Create.cshtml",
@@ -182,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Products\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Products\\Index.cshtml",
@@ -194,44 +287,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
-              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T14:45:17.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-20T02:47:46.395Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T14:42:26.532Z"
+              "WhenOpened": "2026-03-19T14:42:26.532Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -243,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
@@ -251,12 +320,11 @@
               "RelativeToolTip": "Data\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T14:39:22.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-19T14:39:22.512Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Users\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\Users\\Delete.cshtml",
@@ -268,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -280,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "Product.cs",
               "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Models\\Product.cs",
               "RelativeDocumentMoniker": "Models\\Product.cs",

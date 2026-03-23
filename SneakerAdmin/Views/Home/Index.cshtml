@@ -93,7 +93,7 @@
                     <form asp-action="UpdateOrderStatus" method="get" class="d-flex gap-1">
                         <input type="hidden" name="id" value="@order.Id" />
                         <select name="status" class="form-select form-select-sm">
-                            <option value="pending" selected="@(order.Status == "pending")">Chờ xác nhận</option>
+                            <option value="pending" selected="@(order.Status == "pending")">Chờ xác nhận</option> 
                             <option value="confirmed" selected="@(order.Status == "confirmed")">Đã xác nhận</option>
                             <option value="shipping" selected="@(order.Status == "shipping")">Đang giao</option>
                             <option value="delivered" selected="@(order.Status == "delivered")">Đã giao</option>
