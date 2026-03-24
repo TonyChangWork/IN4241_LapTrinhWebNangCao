@@ -45,15 +45,17 @@ function App() {
         setLoading(false)
       })
   }, [])
-  const addToCart = (product) => {
-    const exist = cart.find(item => item.id === product.id)
-    if(exist){
-      setCart(cart.map(item =>
-        item.id === product.id ? {...item, qty: item.qty + 1} : item
-      ))
-    } else {
-      setCart([...cart, {...product, qty:1}])
-    }
+  const addToCart = (product, qty = 1) => {
+    setCart(prev => {
+      const exist = prev.find(item => item.id === product.id)
+      if (exist) {
+        return prev.map(item =>
+          item.id === product.id ? { ...item, qty: item.qty + qty } : item
+        )
+      } else {
+        return [...prev, { ...product, qty }]
+      }
+    })
     toast.success(`Đã thêm ${product.name} vào giỏ!`, {
       duration: 2000,
       position: "bottom-right",

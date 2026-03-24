@@ -31,9 +31,7 @@ function ProductDetail({ addToCart }) {
       setSizeError(true)
       return
     }
-    for (let i = 0; i < qty; i++) {
-      addToCart({ ...product, selectedSize })
-    }
+    addToCart({ ...product, selectedSize }, qty)
     setAdded(true)
     setTimeout(() => setAdded(false), 2000)
   }

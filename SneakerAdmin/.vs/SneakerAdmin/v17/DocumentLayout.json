@@ -94,47 +94,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdminAuthFilter.cs",
-              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Filters\\AdminAuthFilter.cs",
-              "RelativeDocumentMoniker": "Filters\\AdminAuthFilter.cs",
-              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Filters\\AdminAuthFilter.cs",
-              "RelativeToolTip": "Filters\\AdminAuthFilter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T23:12:41.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SneakerAdmin",
-              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\SneakerAdmin.csproj",
-              "RelativeDocumentMoniker": "SneakerAdmin.csproj",
-              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\SneakerAdmin.csproj",
-              "RelativeToolTip": "SneakerAdmin.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-23T23:12:13.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-23T23:09:02.565Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 8,
@@ -145,8 +106,7 @@
               "RelativeToolTip": "Controllers\\AccountController.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T23:08:05.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T23:08:05.536Z"
             },
             {
               "$type": "Document",
@@ -158,8 +118,7 @@
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAEgAAAAAAAAAAAAAAF8AAAByAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-20T16:45:06.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T16:45:06.331Z"
             },
             {
               "$type": "Document",
@@ -171,8 +130,7 @@
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T16:44:41.045Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T16:44:41.045Z"
             },
             {
               "$type": "Document",
@@ -184,8 +142,7 @@
               "RelativeToolTip": "Controllers\\UsersController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T02:29:18.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T02:29:18.458Z"
             },
             {
               "$type": "Document",
@@ -221,8 +178,7 @@
               "RelativeToolTip": "Controllers\\ProductsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T14:45:17.062Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-19T14:45:17.062Z"
             },
             {
               "$type": "Document",
@@ -236,6 +192,42 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-03-20T02:47:46.395Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-23T23:09:02.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SneakerAdmin.csproj",
+              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\SneakerAdmin.csproj",
+              "RelativeDocumentMoniker": "SneakerAdmin.csproj",
+              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\SneakerAdmin.csproj",
+              "RelativeToolTip": "SneakerAdmin.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-23T23:12:13.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminAuthFilter.cs",
+              "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Filters\\AdminAuthFilter.cs",
+              "RelativeDocumentMoniker": "Filters\\AdminAuthFilter.cs",
+              "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAdmin\\Filters\\AdminAuthFilter.cs",
+              "RelativeToolTip": "Filters\\AdminAuthFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T23:12:41.007Z"
             },
             {
               "$type": "Document",
@@ -295,8 +287,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T14:42:26.532Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-19T14:42:26.532Z"
             },
             {
               "$type": "Document",

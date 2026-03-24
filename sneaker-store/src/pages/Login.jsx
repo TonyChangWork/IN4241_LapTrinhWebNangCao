@@ -24,20 +24,30 @@ function Login({ setUser }) {
     }
 
     setLoading(true)
-
-    // Giả lập gọi API — sau này thay bằng fetch ASP.NET
-    setTimeout(() => {
-      if (form.email === "admin@sneaker.com" && form.password === "123456") {
-        const userData = { email: form.email, name: "Admin" }
-        localStorage.setItem("user", JSON.stringify(userData))
-        setUser(userData)
-        toast.success(`Chào mừng ${userData.name}!`, { duration: 2500, position: "bottom-right" })
-        navigate("/")
-      } else {
-        setError("Email hoặc mật khẩu không đúng.")
+    try {
+      const res = await axios.post("https://localhost:7178/api/auth/login", {
+        email: form.email,
+        password: form.password
+      })
+      const userData = {
+        id: res.data.user.id,
+        name: res.data.user.name,
+        email: res.data.user.email,
+        role: res.data.user.role
       }
+      localStorage.setItem("user", JSON.stringify(userData))
+      setUser(userData)
+      toast.success(`Chào mừng ${userData.name}!`, { duration: 2500, position: "bottom-right" })
+      navigate("/")
+    } catch (err) {
+      if (err.response?.status === 401) {
+        setError("Email hoặc mật khẩu không đúng.")
+      } else {
+        setError("Không thể kết nối đến server. Vui lòng thử lại.")
+      }
+    } finally {
       setLoading(false)
-    }, 800)
+    }
   }
 
   return (
@@ -45,7 +55,7 @@ function Login({ setUser }) {
 
       <div className="auth-left">
         <div className="auth-brand">SneakerHub</div>
-        <h1 className="auth-headline">Step Into<br/>Your Style</h1>
+        <h1 className="auth-headline">Step Into<br />Your Style</h1>
         <p className="auth-tagline">Khám phá bộ sưu tập sneaker độc quyền từ các thương hiệu hàng đầu thế giới.</p>
       </div>
 
@@ -82,10 +92,6 @@ function Login({ setUser }) {
             </div>
 
             {error && <p className="error-msg">{error}</p>}
-
-            <div className="form-hint">
-              Tài khoản thử: <strong>admin@sneaker.com</strong> / <strong>123456</strong>
-            </div>
 
             <button type="submit" className="auth-btn" disabled={loading}>
               {loading ? "Đang đăng nhập..." : "Đăng nhập"}

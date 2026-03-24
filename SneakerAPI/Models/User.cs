@@ -1,4 +1,4 @@
-﻿namespace SneakerAPI.Models
+namespace SneakerAPI.Models
 {
     public class User
     {
@@ -7,6 +7,9 @@
         public string Email { get; set; } = "";
         public string PasswordHash { get; set; } = "";
         public string Role { get; set; } = "customer";
+        public string Phone { get; set; } = "";
+        public string AvatarUrl { get; set; } = "";
         public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 }
+

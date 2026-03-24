@@ -125,6 +125,8 @@ function Register() {
                 {errors.confirm && <span className="field-error">{errors.confirm}</span>}
               </div>
 
+              {errors.general && <p className="error-msg">{errors.general}</p>}
+
               <button type="submit" className="auth-btn" disabled={loading}>
                 {loading ? "Đang tạo tài khoản..." : "Tạo tài khoản"}
               </button>

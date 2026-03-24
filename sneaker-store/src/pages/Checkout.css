@@ -260,3 +260,132 @@
     position: static;
   }
 }
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s;
+  background: white;
+}
+
+.payment-option:hover {
+  border-color: #aaa;
+}
+
+.payment-option.active {
+  border-color: #111;
+  background: #fafafa;
+}
+
+.payment-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.payment-info {
+  flex: 1;
+}
+
+.payment-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 2px;
+}
+
+.payment-desc {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+.payment-radio {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+
+.payment-radio.checked {
+  border-color: #111;
+  background: #111;
+  box-shadow: inset 0 0 0 3px white;
+}
+
+.qr-section {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.qr-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 16px;
+}
+
+.qr-code {
+  display: inline-block;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.qr-amount {
+  font-size: 15px;
+  color: #111;
+  margin: 0 0 6px;
+}
+
+.qr-bank {
+  font-size: 13px;
+  color: #555;
+  margin: 0;
+}
+
+.card-section {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+.card-brands {
+  display: flex;
+  gap: 8px;
+}
+
+.card-brands span {
+  padding: 4px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #555;
+}
