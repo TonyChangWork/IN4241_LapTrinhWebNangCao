@@ -80,7 +80,10 @@ function OrderHistory({ user }) {
                           )}
                           <div className="oh-item-info">
                             <p className="oh-item-name">{item.product?.name || "Sản phẩm"}</p>
-                            <p className="oh-item-meta">x{item.quantity} • {formatVND(item.price)}/đôi</p>
+                            <p className="oh-item-meta">
+                              Size: {(item.shoeSize ?? item.ShoeSize) != null ? (item.shoeSize ?? item.ShoeSize) : "—"}
+                              {" · "}x{item.quantity} • {formatVND(item.price)}/đôi
+                            </p>
                           </div>
                           <span className="oh-item-total">{formatVND(item.price * item.quantity)}</span>
                         </div>

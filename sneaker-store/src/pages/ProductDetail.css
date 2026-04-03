@@ -203,6 +203,23 @@
   font-family: inherit;
   cursor: pointer;
   transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  line-height: 1.2;
+}
+
+.pd-add-btn-label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.pd-add-btn-price {
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 .pd-add-btn:hover {
@@ -245,6 +262,56 @@
   gap: 10px;
   font-size: 13px;
   color: #555;
+}
+
+.pd-colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pd-color-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid #e0e0e0;
+  background: white;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s;
+  color: #111;
+  min-width: 140px;
+}
+
+.pd-color-btn:hover {
+  background: #f5f5f5;
+  border-color: #111;
+}
+
+.pd-color-btn.active {
+  background: #111;
+  border-color: #111;
+  color: white;
+}
+
+.pd-color-thumb {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.pd-color-btn.active .pd-color-thumb {
+  border-color: rgba(255,255,255,0.25);
+}
+
+.pd-color-label {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 @media (max-width: 768px) {

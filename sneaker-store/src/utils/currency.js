@@ -1,6 +1,4 @@
 export const formatVND = (price) => {
-  return new Intl.NumberFormat("vi-VN", {
-    style: "currency",
-    currency: "VND"
-  }).format(price)
+  const amount = Number(price) || 0
+  return `${new Intl.NumberFormat("vi-VN").format(Math.round(amount))} đ`
 }

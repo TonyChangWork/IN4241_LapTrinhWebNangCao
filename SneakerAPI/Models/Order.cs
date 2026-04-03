@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SneakerAPI.Models
 {
@@ -22,6 +22,8 @@ namespace SneakerAPI.Models
         public int OrderId { get; set; }
         public int ProductId { get; set; }
         public Product? Product { get; set; }
+        /// <summary>Size giày (EU), ví dụ 42.</summary>
+        public int? ShoeSize { get; set; }
         public int Quantity { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }

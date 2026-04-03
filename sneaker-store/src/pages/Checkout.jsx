@@ -1,17 +1,17 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import axios from "axios"
 import { formatVND } from "../utils/currency"
 import "./Checkout.css"
 import { toast } from "react-hot-toast"
+import { orderService } from "../services/api"
 
-const API_URL = "https://localhost:7178"
+const checkoutLineKey = (item) => `${item.id}-${item.selectedColorIndex ?? "na"}-${item.selectedSize ?? "na"}`
 
 const PAYMENT_METHODS = [
-  { id: "cod",    label: "Thanh toán khi nhận hàng", icon: "🚚", desc: "Trả tiền mặt khi nhận hàng" },
-  { id: "qr",     label: "Chuyển khoản QR",           icon: "📱", desc: "Quét mã QR để thanh toán ngay" },
-  { id: "card",   label: "Thẻ tín dụng / Ghi nợ",     icon: "💳", desc: "Visa, Mastercard, JCB" },
-  { id: "momo",   label: "Ví MoMo",                   icon: "🟣", desc: "Thanh toán qua ví MoMo" },
+  { id: "cod", label: "Thanh toán khi nhận hàng", icon: "🚚", desc: "Trả tiền mặt khi nhận hàng" },
+  { id: "qr", label: "Chuyển khoản QR", icon: "📱", desc: "Quét mã QR để thanh toán ngay" },
+  { id: "card", label: "Thẻ tín dụng / Ghi nợ", icon: "💳", desc: "Visa, Mastercard, JCB" },
+  { id: "momo", label: "Ví MoMo", icon: "🟣", desc: "Thanh toán qua ví MoMo" },
 ]
 
 function Checkout({ cart, setCart, user }) {
@@ -62,12 +62,17 @@ function Checkout({ cart, setCart, user }) {
 
     setLoading(true)
     try {
-      const res = await axios.post(`${API_URL}/api/orders`, {
+      const res = await orderService.create({
         userId: user.id,
         total: total,
         address: form.address,
         phone: form.phone,
-        items: cart.map(item => ({ productId: item.id, quantity: item.qty, price: item.price }))
+        items: cart.map(item => ({
+          productId: item.id,
+          shoeSize: item.selectedSize ?? null,
+          quantity: item.qty,
+          price: item.price,
+        }))
       })
       setOrderId(res.data.orderId)
       setSuccess(true)
@@ -87,9 +92,9 @@ function Checkout({ cart, setCart, user }) {
         <h2>Đặt hàng thành công!</h2>
         <p>Mã đơn hàng của bạn: <strong>#{orderId}</strong></p>
         <p>Chúng tôi sẽ liên hệ xác nhận qua số <strong>{form.phone}</strong></p>
-        {paymentMethod === "qr" && <p style={{color:"#22c55e"}}>✓ Đã xác nhận thanh toán QR</p>}
-        {paymentMethod === "card" && <p style={{color:"#22c55e"}}>✓ Đã xác nhận thanh toán thẻ</p>}
-        {paymentMethod === "momo" && <p style={{color:"#22c55e"}}>✓ Đã xác nhận thanh toán MoMo</p>}
+        {paymentMethod === "qr" && <p style={{ color: "#22c55e" }}>✓ Đã xác nhận thanh toán QR</p>}
+        {paymentMethod === "card" && <p style={{ color: "#22c55e" }}>✓ Đã xác nhận thanh toán thẻ</p>}
+        {paymentMethod === "momo" && <p style={{ color: "#22c55e" }}>✓ Đã xác nhận thanh toán MoMo</p>}
         <Link to="/"><button className="back-home-btn">Tiếp tục mua sắm</button></Link>
       </div>
     )
@@ -109,17 +114,17 @@ function Checkout({ cart, setCart, user }) {
         <form onSubmit={handleSubmit} className="checkout-form">
           <div className="form-group">
             <label>Họ và tên</label>
-            <input type="text" name="name" placeholder="Nguyễn Văn A" value={form.name} onChange={handleChange} className={errors.name ? "input-error" : ""}/>
+            <input type="text" name="name" placeholder="Nguyễn Văn A" value={form.name} onChange={handleChange} className={errors.name ? "input-error" : ""} />
             {errors.name && <span className="field-error">{errors.name}</span>}
           </div>
           <div className="form-group">
             <label>Số điện thoại</label>
-            <input type="text" name="phone" placeholder="0901234567" value={form.phone} onChange={handleChange} className={errors.phone ? "input-error" : ""}/>
+            <input type="text" name="phone" placeholder="0901234567" value={form.phone} onChange={handleChange} className={errors.phone ? "input-error" : ""} />
             {errors.phone && <span className="field-error">{errors.phone}</span>}
           </div>
           <div className="form-group">
             <label>Địa chỉ giao hàng</label>
-            <textarea name="address" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố" value={form.address} onChange={handleChange} rows={3} className={errors.address ? "input-error" : ""}/>
+            <textarea name="address" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố" value={form.address} onChange={handleChange} rows={3} className={errors.address ? "input-error" : ""} />
             {errors.address && <span className="field-error">{errors.address}</span>}
           </div>
 
@@ -137,7 +142,7 @@ function Checkout({ cart, setCart, user }) {
                     <p className="payment-label">{method.label}</p>
                     <p className="payment-desc">{method.desc}</p>
                   </div>
-                  <div className={"payment-radio" + (paymentMethod === method.id ? " checked" : "")}/>
+                  <div className={"payment-radio" + (paymentMethod === method.id ? " checked" : "")} />
                 </div>
               ))}
             </div>
@@ -147,22 +152,22 @@ function Checkout({ cart, setCart, user }) {
             <div className="qr-section">
               <p className="qr-title">Quét mã QR để thanh toán</p>
               <div className="qr-code">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=SneakerHub-Payment" alt="QR Code"/>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=SneakerHub-Payment" alt="QR Code" />
               </div>
               <p className="qr-amount">Số tiền: <strong>{formatVND(total)}</strong></p>
               <p className="qr-bank">MB Bank — 0123456789 — SNEAKERHUB</p>
-              <p className="qr-note" style={{color:"#888", fontSize:"12px"}}>Nội dung chuyển khoản: SneakerHub + SĐT của bạn</p>
+              <p className="qr-note" style={{ color: "#888", fontSize: "12px" }}>Nội dung chuyển khoản: SneakerHub + SĐT của bạn</p>
             </div>
           )}
 
           {paymentMethod === "momo" && (
             <div className="qr-section">
               <p className="qr-title">Quét mã MoMo để thanh toán</p>
-              <div className="qr-code" style={{background:"#d82d8b", borderRadius:"12px", padding:"12px"}}>
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=MoMo-SneakerHub&color=ffffff&bgcolor=d82d8b" alt="MoMo QR"/>
+              <div className="qr-code" style={{ background: "#d82d8b", borderRadius: "12px", padding: "12px" }}>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=MoMo-SneakerHub&color=ffffff&bgcolor=d82d8b" alt="MoMo QR" />
               </div>
               <p className="qr-amount">Số tiền: <strong>{formatVND(total)}</strong></p>
-              <p className="qr-bank" style={{color:"#d82d8b"}}>MoMo — 0901 234 567 — SNEAKERHUB</p>
+              <p className="qr-bank" style={{ color: "#d82d8b" }}>MoMo — 0901 234 567 — SNEAKERHUB</p>
             </div>
           )}
 
@@ -171,23 +176,23 @@ function Checkout({ cart, setCart, user }) {
               <p className="card-title">Thông tin thẻ</p>
               <div className="form-group">
                 <label>Số thẻ</label>
-                <input type="text" name="number" placeholder="1234 5678 9012 3456" value={cardForm.number} onChange={handleCardChange} className={errors.cardNumber ? "input-error" : ""}/>
+                <input type="text" name="number" placeholder="1234 5678 9012 3456" value={cardForm.number} onChange={handleCardChange} className={errors.cardNumber ? "input-error" : ""} />
                 {errors.cardNumber && <span className="field-error">{errors.cardNumber}</span>}
               </div>
               <div className="form-group">
                 <label>Tên chủ thẻ</label>
-                <input type="text" name="name" placeholder="NGUYEN VAN A" value={cardForm.name} onChange={handleCardChange} className={errors.cardName ? "input-error" : ""}/>
+                <input type="text" name="name" placeholder="NGUYEN VAN A" value={cardForm.name} onChange={handleCardChange} className={errors.cardName ? "input-error" : ""} />
                 {errors.cardName && <span className="field-error">{errors.cardName}</span>}
               </div>
-              <div style={{display:"flex", gap:"12px"}}>
-                <div className="form-group" style={{flex:1}}>
+              <div style={{ display: "flex", gap: "12px" }}>
+                <div className="form-group" style={{ flex: 1 }}>
                   <label>Ngày hết hạn</label>
-                  <input type="text" name="expiry" placeholder="MM/YY" value={cardForm.expiry} onChange={handleCardChange} className={errors.cardExpiry ? "input-error" : ""}/>
+                  <input type="text" name="expiry" placeholder="MM/YY" value={cardForm.expiry} onChange={handleCardChange} className={errors.cardExpiry ? "input-error" : ""} />
                   {errors.cardExpiry && <span className="field-error">{errors.cardExpiry}</span>}
                 </div>
-                <div className="form-group" style={{flex:1}}>
+                <div className="form-group" style={{ flex: 1 }}>
                   <label>CVV</label>
-                  <input type="text" name="cvv" placeholder="123" value={cardForm.cvv} onChange={handleCardChange} className={errors.cardCvv ? "input-error" : ""}/>
+                  <input type="text" name="cvv" placeholder="123" value={cardForm.cvv} onChange={handleCardChange} className={errors.cardCvv ? "input-error" : ""} />
                   {errors.cardCvv && <span className="field-error">{errors.cardCvv}</span>}
                 </div>
               </div>
@@ -209,11 +214,13 @@ function Checkout({ cart, setCart, user }) {
         <h2>Đơn hàng ({cart.reduce((s, i) => s + i.qty, 0)} sản phẩm)</h2>
         <div className="checkout-items">
           {cart.map(item => (
-            <div key={item.id} className="checkout-item">
-              <img src={item.image} alt={item.name}/>
+            <div key={checkoutLineKey(item)} className="checkout-item">
+              <img src={item.image} alt={item.name} />
               <div className="checkout-item-info">
                 <p className="checkout-item-name">{item.name}</p>
                 <p className="checkout-item-brand">{item.brand}</p>
+                <p className="checkout-item-size">Size: {item.selectedSize != null ? item.selectedSize : "—"}</p>
+                <p className="checkout-item-size">Màu: {item.selectedColorName ? item.selectedColorName : "—"}</p>
                 <p className="checkout-item-qty">x{item.qty}</p>
               </div>
               <span className="checkout-item-price">{formatVND(item.price * item.qty)}</span>
@@ -222,7 +229,7 @@ function Checkout({ cart, setCart, user }) {
         </div>
         <div className="checkout-summary">
           <div className="summary-row"><span>Tạm tính</span><span>{formatVND(total)}</span></div>
-          <div className="summary-row"><span>Phí giao hàng</span><span style={{color:"#22c55e"}}>Miễn phí</span></div>
+          <div className="summary-row"><span>Phí giao hàng</span><span style={{ color: "#22c55e" }}>Miễn phí</span></div>
           <div className="summary-row"><span>Hình thức</span><span>{PAYMENT_METHODS.find(m => m.id === paymentMethod)?.label}</span></div>
           <div className="summary-row total"><span>Tổng cộng</span><span>{formatVND(total)}</span></div>
         </div>

@@ -21,7 +21,6 @@ D:\IN4241_LapTrinhWebNangCao\SneakerAPI\obj\Debug\net8.0\staticwebassets.build.j
 D:\IN4241_LapTrinhWebNangCao\SneakerAPI\obj\Debug\net8.0\staticwebassets.build.json.cache
 D:\IN4241_LapTrinhWebNangCao\SneakerAPI\obj\Debug\net8.0\staticwebassets.development.json
 D:\IN4241_LapTrinhWebNangCao\SneakerAPI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\IN4241_LapTrinhWebNangCao\SneakerAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\IN4241_LapTrinhWebNangCao\SneakerAPI\obj\Debug\net8.0\SneakerAPI.dll
 D:\IN4241_LapTrinhWebNangCao\SneakerAPI\obj\Debug\net8.0\refint\SneakerAPI.dll
 D:\IN4241_LapTrinhWebNangCao\SneakerAPI\obj\Debug\net8.0\SneakerAPI.pdb

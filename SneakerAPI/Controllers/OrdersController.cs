@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SneakerAPI.Data;
 using SneakerAPI.Models;
+using Microsoft.AspNetCore.Authorization; // Added this using directive
 
 namespace SneakerAPI.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class OrdersController : ControllerBase
@@ -29,9 +31,12 @@ namespace SneakerAPI.Controllers
                 Total = dto.Total,
                 Status = "pending",
                 OrderDate = DateTime.Now,
+                Address = dto.Address ?? "",
+                Phone = dto.Phone ?? "",
                 Items = dto.Items.Select(i => new OrderItem
                 {
                     ProductId = i.ProductId,
+                    ShoeSize = i.ShoeSize,
                     Quantity = i.Quantity,
                     Price = i.Price
                 }).ToList()
@@ -70,6 +75,7 @@ namespace SneakerAPI.Controllers
     public class OrderItemDto
     {
         public int ProductId { get; set; }
+        public int? ShoeSize { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
     }
