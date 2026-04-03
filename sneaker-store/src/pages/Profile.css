@@ -317,6 +317,8 @@
 .oh-loading { text-align: center; padding: 60px; color: #888; }
 .oh-empty { text-align: center; padding: 40px; color: #888; }
 
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .profile-page { flex-direction: column; }

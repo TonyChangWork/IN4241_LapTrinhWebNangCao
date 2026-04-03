@@ -18,14 +18,13 @@ function ProductDetail({ addToCart, products = [] }) {
 
   const colorOptions = product
     ? [
-        { name: product.color1Name, image: product.color1Image, index: 1 },
-        { name: product.color2Name, image: product.color2Image, index: 2 },
-        { name: product.color3Name, image: product.color3Image, index: 3 },
-        { name: product.color4Name, image: product.color4Image, index: 4 },
-      ].filter((c) => c.image)
+      { name: product.color1Name, image: product.color1Image, index: 1 },
+      { name: product.color2Name, image: product.color2Image, index: 2 },
+      { name: product.color3Name, image: product.color3Image, index: 3 },
+      { name: product.color4Name, image: product.color4Image, index: 4 },
+    ].filter((c) => c.image)
     : []
 
-  // Nếu database chưa có màu (null), vẫn render ít nhất 1 "màu mặc định"
   const normalizedColorOptions =
     colorOptions.length > 0
       ? colorOptions
@@ -35,10 +34,20 @@ function ProductDetail({ addToCart, products = [] }) {
 
   const selectedColor = normalizedColorOptions[selectedColorIndex] || null
 
+  const formatUrl = (url) =>
+    url?.startsWith("/") ? `https://localhost:7178${url}` : url
+
   useEffect(() => {
     const localProduct = products.find((p) => String(p.id) === String(id))
     if (localProduct) {
-      setProduct(localProduct)
+      setProduct({
+        ...localProduct,
+        image: formatUrl(localProduct.image ?? localProduct.Image),
+        color1Image: formatUrl(localProduct.color1Image ?? localProduct.Color1Image),
+        color2Image: formatUrl(localProduct.color2Image ?? localProduct.Color2Image),
+        color3Image: formatUrl(localProduct.color3Image ?? localProduct.Color3Image),
+        color4Image: formatUrl(localProduct.color4Image ?? localProduct.Color4Image),
+      })
       setLoading(false)
       return
     }
@@ -46,7 +55,15 @@ function ProductDetail({ addToCart, products = [] }) {
     setLoading(true)
     productService.getById(id)
       .then(res => {
-        setProduct(res.data)
+        const p = res.data
+        setProduct({
+          ...p,
+          image: formatUrl(p.image ?? p.Image),
+          color1Image: formatUrl(p.color1Image ?? p.Color1Image),
+          color2Image: formatUrl(p.color2Image ?? p.Color2Image),
+          color3Image: formatUrl(p.color3Image ?? p.Color3Image),
+          color4Image: formatUrl(p.color4Image ?? p.Color4Image),
+        })
       })
       .catch(() => {
         setProduct(null)
@@ -57,7 +74,6 @@ function ProductDetail({ addToCart, products = [] }) {
   }, [id, products])
 
   useEffect(() => {
-    // Khi đổi sản phẩm, reset màu về màu đầu tiên có ảnh (nếu có)
     if (product) setSelectedColorIndex(0)
   }, [product])
 
@@ -72,7 +88,6 @@ function ProductDetail({ addToCart, products = [] }) {
         selectedSize,
         selectedColorIndex: selectedColor?.index ?? null,
         selectedColorName: selectedColor?.name ?? null,
-        // Đổi ảnh theo màu để cart/checkout hiển thị đúng màu đang chọn
         image: selectedColor?.image ?? product.image,
       })
     }

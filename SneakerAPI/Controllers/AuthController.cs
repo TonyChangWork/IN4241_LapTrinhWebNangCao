@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -64,7 +64,7 @@ namespace SneakerAPI.Controllers
             {
                 message = "Đăng nhập thành công!",
                 token = token,
-                user = new { user.Id, user.Name, user.Email, user.Role }
+                user = new { user.Id, user.Name, user.Email, user.Phone, user.Address, user.Role }
             });
         }
 

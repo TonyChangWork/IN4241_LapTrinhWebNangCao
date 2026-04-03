@@ -22,7 +22,7 @@ namespace SneakerAPI.Controllers
         {
             var user = await _context.Users.FindAsync(id);
             if (user == null) return NotFound();
-            return Ok(new { user.Id, user.Name, user.Email, user.Phone, user.AvatarUrl, user.Role });
+            return Ok(new { user.Id, user.Name, user.Email, user.Phone, user.AvatarUrl, user.Address, user.Role });
         }
 
         // PUT api/users/{id}
@@ -35,9 +35,10 @@ namespace SneakerAPI.Controllers
             user.Name = dto.Name ?? user.Name;
             user.Phone = dto.Phone ?? user.Phone;
             user.AvatarUrl = dto.AvatarUrl ?? user.AvatarUrl;
+            user.Address = dto.Address ?? user.Address;
             await _context.SaveChangesAsync();
 
-            return Ok(new { user.Id, user.Name, user.Email, user.Phone, user.AvatarUrl, user.Role });
+            return Ok(new { user.Id, user.Name, user.Email, user.Phone, user.AvatarUrl, user.Address, user.Role });
         }
 
         // POST api/users/{id}/change-password
@@ -71,6 +72,7 @@ namespace SneakerAPI.Controllers
         public string? Name { get; set; }
         public string? Phone { get; set; }
         public string? AvatarUrl { get; set; }
+        public string? Address { get; set; }
     }
 
     public class ChangePasswordDto

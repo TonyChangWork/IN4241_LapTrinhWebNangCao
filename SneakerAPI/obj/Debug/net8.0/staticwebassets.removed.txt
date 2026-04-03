@@ -1,0 +1,6 @@
+D:\IN4241_LapTrinhWebNangCao\SneakerAPI\wwwroot\images\products\adidas-ultraboost.jpg
+D:\IN4241_LapTrinhWebNangCao\SneakerAPI\wwwroot\images\products\jordan-1-chicago.jpg
+D:\IN4241_LapTrinhWebNangCao\SneakerAPI\wwwroot\images\products\jordan-1-retro-high.jpg
+D:\IN4241_LapTrinhWebNangCao\SneakerAPI\wwwroot\images\products\nike-air-force-1-white.jpg
+D:\IN4241_LapTrinhWebNangCao\SneakerAPI\wwwroot\images\products\nike-air-force-1.jpg
+D:\IN4241_LapTrinhWebNangCao\SneakerAPI\wwwroot\images\products\puma-rs-x.jpg

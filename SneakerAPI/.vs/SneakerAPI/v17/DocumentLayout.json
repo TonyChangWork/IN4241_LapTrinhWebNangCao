@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{25D53BD9-308B-4508-A835-F84B01D37C15}|SneakerAPI.csproj|d:\\in4241_laptrinhwebnangcao\\sneakerapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25D53BD9-308B-4508-A835-F84B01D37C15}|SneakerAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{25D53BD9-308B-4508-A835-F84B01D37C15}|SneakerAPI.csproj|d:\\in4241_laptrinhwebnangcao\\sneakerapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25D53BD9-308B-4508-A835-F84B01D37C15}|SneakerAPI.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25D53BD9-308B-4508-A835-F84B01D37C15}|SneakerAPI.csproj|d:\\in4241_laptrinhwebnangcao\\sneakerapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25D53BD9-308B-4508-A835-F84B01D37C15}|SneakerAPI.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25D53BD9-308B-4508-A835-F84B01D37C15}|SneakerAPI.csproj|d:\\in4241_laptrinhwebnangcao\\sneakerapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25D53BD9-308B-4508-A835-F84B01D37C15}|SneakerAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25D53BD9-308B-4508-A835-F84B01D37C15}|SneakerAPI.csproj|d:\\in4241_laptrinhwebnangcao\\sneakerapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -90,13 +90,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAADwvyUAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC4AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-16T17:32:42.404Z",
               "EditorCaption": ""
@@ -139,20 +139,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Product.cs",
               "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAPI\\Models\\Product.cs",
               "RelativeDocumentMoniker": "Models\\Product.cs",
               "ToolTip": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAPI\\Models\\Product.cs",
               "RelativeToolTip": "Models\\Product.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBAAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-16T17:28:07.729Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\IN4241_LapTrinhWebNangCao\\SneakerAPI\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
@@ -160,8 +160,7 @@
               "RelativeToolTip": "Data\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T17:30:37.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T17:30:37.973Z"
             },
             {
               "$type": "Document",

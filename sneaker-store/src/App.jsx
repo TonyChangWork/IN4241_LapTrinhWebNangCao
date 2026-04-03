@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import ProductCard from "./components/ProductCard"
-import BrandFilter from "./components/BrandFilter"
 import { useState, useEffect } from "react"
 import { Routes, Route } from "react-router-dom"
 import ProductDetail from "./pages/ProductDetail"
@@ -11,6 +10,9 @@ import Register from "./pages/Register"
 import Checkout from "./pages/Checkout"
 import Footer from "./components/Footer"
 import OrderHistory from "./pages/OrderHistory"
+import Profile from "./pages/Profile"
+import Products from "./pages/Products"
+import Brands from "./pages/Brands"
 import NotFound from "./pages/NotFound"
 import TrustSection from "./components/TrustSection"
 import PromoBanner from "./components/PromoBanner"
@@ -56,24 +58,35 @@ function App() {
       ? rawProducts.$values
       : []
 
-    return list
+      return list
       .map((p, i) => {
         const rawPrice = Number(p.price ?? p.Price ?? 0)
-        // Một số nguồn trả giá rút gọn (vd: 120 => 1.200.000), chuẩn hoá để UI hiển thị đúng VND
         const price = rawPrice > 0 && rawPrice < 10000 ? rawPrice * 10000 : rawPrice
         const oldPriceValue = p.oldPrice ?? p.OldPrice
         const oldPriceRaw = oldPriceValue !== undefined && oldPriceValue !== null ? Number(oldPriceValue) : null
         const oldPrice = oldPriceRaw && oldPriceRaw < 10000 ? oldPriceRaw * 10000 : oldPriceRaw
+        
+        const formatUrl = (url) => url?.startsWith("/") ? `https://localhost:7178${url}` : url;
+
         return {
           id: p.id ?? p.Id ?? i + 1,
           name: p.name ?? p.Name ?? `Sản phẩm ${i + 1}`,
           brand: p.brand ?? p.Brand ?? "Sneaker",
-          image: p.image ?? p.Image ?? "https://via.placeholder.com/400x300?text=Sneaker",
+          image: formatUrl(p.image ?? p.Image ?? "https://via.placeholder.com/400x300?text=Sneaker"),
           price,
           stock: p.stock ?? p.Stock ?? 0,
           isNew: Boolean(p.isNew ?? p.IsNew ?? i < 4),
           oldPrice: oldPrice || (i % 3 === 0 ? Number((price * 1.2).toFixed(2)) : null),
           discountPercent: p.discountPercent ?? p.DiscountPercent ?? (i % 3 === 0 ? 20 : null),
+          
+          color1Name: p.color1Name ?? p.Color1Name ?? null,
+          color1Image: formatUrl(p.color1Image ?? p.Color1Image ?? null),
+          color2Name: p.color2Name ?? p.Color2Name ?? null,
+          color2Image: formatUrl(p.color2Image ?? p.Color2Image ?? null),
+          color3Name: p.color3Name ?? p.Color3Name ?? null,
+          color3Image: formatUrl(p.color3Image ?? p.Color3Image ?? null),
+          color4Name: p.color4Name ?? p.Color4Name ?? null,
+          color4Image: formatUrl(p.color4Image ?? p.Color4Image ?? null),
         }
       })
       .filter((p) => p.price > 0)
@@ -204,8 +217,7 @@ function App() {
               {/* All / Filtered Products */}
               <div id="all-products" className="section-container" style={{ padding: "40px 60px" }}>
                 <div style={{ marginBottom: "30px" }}>
-                  <h2 style={{ fontSize: "24px", fontWeight: "800", margin: "0 0 14px" }}>EXPLORE MORE</h2>
-                  <BrandFilter active={brandFilter} onChange={setBrandFilter} />
+                  <h2 style={{ fontSize: "24px", fontWeight: "800", margin: "0 0 14px" }}>ALL PRODUCTS</h2>
                 </div>
                 {loading ? (
                   <p style={{ textAlign: "center", padding: "40px", color: "#888" }}>Đang tải sản phẩm...</p>
@@ -217,8 +229,7 @@ function App() {
                   }}>
                     {products
                       .filter(product =>
-                        (brandFilter === "All" || product.brand === brandFilter) &&
-                        (searchTerm === "" || product.name.toLowerCase().includes(searchTerm.toLowerCase()))
+                        searchTerm === "" || product.name.toLowerCase().includes(searchTerm.toLowerCase())
                       )
                       .map(product => (
                         <ProductCard key={product.id} product={product} />
@@ -237,6 +248,9 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} user={user} />} />
           <Route path="/orders" element={<OrderHistory user={user} />} />
+          <Route path="/profile" element={<Profile user={user} onUserUpdated={(u) => { setUser(u); localStorage.setItem("user", JSON.stringify(u)) }} logout={logout} />} />
+          <Route path="/products" element={<Products products={products} />} />
+          <Route path="/brands" element={<Brands products={products} />} />
           <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

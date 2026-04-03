@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import axios from "axios"
 import { formatVND } from "../utils/currency"
+import { orderService } from "../services/api"
 import "./OrderHistory.css"
-
-const API_URL = "https://localhost:7178"
 
 const STATUS_MAP = {
   pending:    { label: "Chờ xác nhận", color: "#f59e0b" },
@@ -12,6 +10,22 @@ const STATUS_MAP = {
   shipping:   { label: "Đang giao",    color: "#8b5cf6" },
   delivered:  { label: "Đã giao",      color: "#22c55e" },
   cancelled:  { label: "Đã huỷ",       color: "#ef4444" },
+}
+
+function normalizeOrders(data) {
+  const list = Array.isArray(data)
+    ? data
+    : Array.isArray(data?.$values)
+    ? data.$values
+    : []
+  return list.map(o => ({
+    ...o,
+    items: Array.isArray(o.items)
+      ? o.items
+      : Array.isArray(o.items?.$values)
+      ? o.items.$values
+      : [],
+  }))
 }
 
 function OrderHistory({ user }) {
@@ -22,8 +36,8 @@ function OrderHistory({ user }) {
 
   useEffect(() => {
     if (!user) { navigate("/login"); return }
-    axios.get(`${API_URL}/api/orders/user/${user.id}`)
-      .then(res => { setOrders(res.data); setLoading(false) })
+    orderService.getByUser(user.id)
+      .then(res => { setOrders(normalizeOrders(res.data)); setLoading(false) })
       .catch(() => setLoading(false))
   }, [user])
 

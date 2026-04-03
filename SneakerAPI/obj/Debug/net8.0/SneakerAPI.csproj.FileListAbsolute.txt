@@ -133,3 +133,5 @@ D:\IN4241_LapTrinhWebNangCao\SneakerAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0
 D:\IN4241_LapTrinhWebNangCao\SneakerAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\IN4241_LapTrinhWebNangCao\SneakerAPI\obj\Debug\net8.0\SneakerAPI.csproj.AssemblyReference.cache
 D:\IN4241_LapTrinhWebNangCao\SneakerAPI\obj\Debug\net8.0\SneakerAPI.csproj.Up2Date
+D:\IN4241_LapTrinhWebNangCao\SneakerAPI\bin\Debug\net8.0\SneakerAPI.staticwebassets.runtime.json
+D:\IN4241_LapTrinhWebNangCao\SneakerAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

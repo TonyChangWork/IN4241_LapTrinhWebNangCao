@@ -9,6 +9,7 @@ namespace SneakerAPI.Models
         public string Role { get; set; } = "customer";
         public string Phone { get; set; } = "";
         public string AvatarUrl { get; set; } = "";
+        public string Address { get; set; } = "";
         public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 }
