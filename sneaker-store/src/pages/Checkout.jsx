@@ -4,15 +4,18 @@ import { formatVND } from "../utils/currency"
 import "./Checkout.css"
 import { toast } from "react-hot-toast"
 import { orderService } from "../services/api"
+import { Truck, QrCode, CreditCard, Wallet } from "lucide-react"
 
 const checkoutLineKey = (item) => `${item.id}-${item.selectedColorIndex ?? "na"}-${item.selectedSize ?? "na"}`
 
 const PAYMENT_METHODS = [
-  { id: "cod", label: "Thanh toán khi nhận hàng", icon: "🚚", desc: "Trả tiền mặt khi nhận hàng" },
-  { id: "qr", label: "Chuyển khoản QR", icon: "📱", desc: "Quét mã QR để thanh toán ngay" },
-  { id: "card", label: "Thẻ tín dụng / Ghi nợ", icon: "💳", desc: "Visa, Mastercard, JCB" },
-  { id: "momo", label: "Ví MoMo", icon: "🟣", desc: "Thanh toán qua ví MoMo" },
+  { id: "cod", label: "Thanh toán khi nhận hàng", icon: <Truck size={24} />, desc: "Trả tiền mặt khi nhận hàng" },
+  { id: "qr", label: "Chuyển khoản QR", icon: <QrCode size={24} />, desc: "Quét mã QR để thanh toán ngay" },
+  { id: "card", label: "Thẻ tín dụng / Ghi nợ", icon: <CreditCard size={24} />, desc: "Visa, Mastercard, JCB" },
+  { id: "momo", label: "Ví MoMo", icon: <Wallet size={24} color="#d82d8b" />, desc: "Thanh toán qua ví MoMo" },
 ]
+
+const formatImg = (url) => (url?.startsWith("/") ? `https://localhost:7178${url}` : (url || "https://via.placeholder.com/150?text=No+Image"));
 
 function Checkout({ cart, setCart, user }) {
   const navigate = useNavigate()
@@ -215,7 +218,7 @@ function Checkout({ cart, setCart, user }) {
         <div className="checkout-items">
           {cart.map(item => (
             <div key={checkoutLineKey(item)} className="checkout-item">
-              <img src={item.image} alt={item.name} />
+              <img src={formatImg(item.image || item.Image)} alt={item.name} />
               <div className="checkout-item-info">
                 <p className="checkout-item-name">{item.name}</p>
                 <p className="checkout-item-brand">{item.brand}</p>

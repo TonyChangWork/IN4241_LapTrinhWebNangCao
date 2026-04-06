@@ -28,6 +28,8 @@ function normalizeOrders(data) {
   }))
 }
 
+const formatImg = (url) => (url?.startsWith("/") ? `https://localhost:7178${url}` : (url || "https://via.placeholder.com/150?text=No+Image"));
+
 function OrderHistory({ user }) {
   const navigate = useNavigate()
   const [orders, setOrders] = useState([])
@@ -90,7 +92,7 @@ function OrderHistory({ user }) {
                       {order.items?.map(item => (
                         <div key={item.id} className="oh-item">
                           {item.product && (
-                            <img src={item.product.image} alt={item.product.name}/>
+                            <img src={formatImg(item.product.image || item.product.Image)} alt={item.product.name || item.product.Name}/>
                           )}
                           <div className="oh-item-info">
                             <p className="oh-item-name">{item.product?.name || "Sản phẩm"}</p>

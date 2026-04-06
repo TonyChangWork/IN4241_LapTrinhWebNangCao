@@ -32,7 +32,7 @@ const BRANDS = [
     bg: "linear-gradient(135deg, #cc0000 0%, #8b0000 100%)",
     accent: "#fff",
     textColor: "#fff",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/8/88/Puma_Logo.svg",
+    logo: "/puma.svg",
     banner: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=900&q=80",
   },
   {
@@ -42,7 +42,7 @@ const BRANDS = [
     bg: "linear-gradient(135deg, #dc2626 0%, #991b1b 100%)",
     accent: "#fff",
     textColor: "#fff",
-    logo: "https://cdn.worldvectorlogo.com/logos/air-jordan.svg",
+    logo: "https://upload.wikimedia.org/wikipedia/en/3/37/Jumpman_logo.svg",
     banner: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=900&q=80",
   },
   {
@@ -52,7 +52,7 @@ const BRANDS = [
     bg: "linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%)",
     accent: "#fff",
     textColor: "#fff",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/e/ea/New_Balance_logo.svg",
+    logo: "/newbalance.svg",
     banner: "https://images.unsplash.com/photo-1556906781-9a412961a28d?w=900&q=80",
   },
   {
@@ -72,7 +72,7 @@ const BRANDS = [
     bg: "linear-gradient(135deg, #1c1c1c 0%, #3d3d3d 100%)",
     accent: "#ef4444",
     textColor: "#fff",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/9/91/Vans-logo.svg",
+    logo: "/vans.svg",
     banner: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=900&q=80",
   },
 ]

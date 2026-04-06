@@ -4,6 +4,8 @@ import "./Cart.css"
 
 const lineKey = (item) => `${item.id}-${item.selectedColorIndex ?? "na"}-${item.selectedSize ?? "na"}`
 
+const formatImg = (url) => (url?.startsWith("/") ? `https://localhost:7178${url}` : (url || "https://via.placeholder.com/150?text=No+Image"));
+
 function Cart({ cart, setCart }) {
   const navigate = useNavigate()
 
@@ -51,7 +53,7 @@ function Cart({ cart, setCart }) {
         const key = lineKey(item)
         return (
         <div key={key} style={{ display:"flex", gap:"20px", alignItems:"center", marginBottom:"16px", padding:"12px", border:"1px solid #eee", borderRadius:"8px" }}>
-          <img src={item.image} width="80" height="80" style={{ objectFit:"cover", borderRadius:"6px" }}/>
+          <img src={formatImg(item.image || item.Image)} width="80" height="80" style={{ objectFit:"cover", borderRadius:"6px" }} alt={item.name}/>
           <div style={{ flex:1 }}>
             <h4 style={{ margin:"0 0 4px" }}>{item.name}</h4>
             <p style={{ margin:"0 0 2px", color:"#888", fontSize:"13px" }}>

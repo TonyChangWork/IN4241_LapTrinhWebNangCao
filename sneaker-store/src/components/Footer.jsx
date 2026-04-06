@@ -1,5 +1,6 @@
 import "./Footer.css"
 import { Link } from "react-router-dom"
+import { MapPin, Phone, Mail, Clock } from "lucide-react"
 
 function Footer() {
   return (
@@ -42,10 +43,10 @@ function Footer() {
         <div className="footer-contact">
           <h4>Liên hệ</h4>
           <ul>
-            <li>📍 123 Nguyễn Huệ, Q.1, TP.HCM</li>
-            <li>📞 0901 234 567</li>
-            <li>✉️ support@sneakerhub.vn</li>
-            <li>🕐 8:00 - 22:00, Thứ 2 - Chủ nhật</li>
+            <li style={{ display: "flex", gap: "8px", alignItems: "center" }}><MapPin size={16} /> 123 Nguyễn Huệ, Q.1, TP.HCM</li>
+            <li style={{ display: "flex", gap: "8px", alignItems: "center" }}><Phone size={16} /> 0901 234 567</li>
+            <li style={{ display: "flex", gap: "8px", alignItems: "center" }}><Mail size={16} /> support@sneakerhub.vn</li>
+            <li style={{ display: "flex", gap: "8px", alignItems: "center" }}><Clock size={16} /> 8:00 - 22:00, Thứ 2 - Chủ nhật</li>
           </ul>
         </div>
 

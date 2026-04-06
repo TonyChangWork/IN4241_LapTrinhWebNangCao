@@ -1,13 +1,14 @@
 import "./Navbar.css"
 import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
-import { Search, X, ShoppingCart, LogOut } from "lucide-react"
+import { Search, X, ShoppingCart, LogOut, Menu } from "lucide-react"
 import { formatVND } from "../utils/currency"
 
 function Navbar({ cartCount, user, logout, onSearch, products = [] }) {
   const [searchTerm, setSearchTerm] = useState("")
   const [showSearch, setShowSearch] = useState(false)
   const [showDropdown, setShowDropdown] = useState(false)
+  const [showMobileMenu, setShowMobileMenu] = useState(false)
   const navigate = useNavigate()
 
   const filtered = searchTerm.trim()
@@ -42,13 +43,29 @@ function Navbar({ cartCount, user, logout, onSearch, products = [] }) {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">SneakerHub</div>
+      <button className="mobile-menu-btn" onClick={() => setShowMobileMenu(!showMobileMenu)}>
+        {showMobileMenu ? <X size={24} /> : <Menu size={24} />}
+      </button>
 
-      <ul className="nav-links">
+      <div className="navbar-logo">
+        <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>SneakerHub</Link>
+      </div>
+
+      <ul className="nav-links desktop-only">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/products">Products</Link></li>
         <li><Link to="/brands">Brands</Link></li>
+        <li><Link to="/about">About Us</Link></li>
       </ul>
+
+      {showMobileMenu && (
+        <div className="mobile-dropdown">
+          <Link to="/" onClick={() => setShowMobileMenu(false)}>Home</Link>
+          <Link to="/products" onClick={() => setShowMobileMenu(false)}>Products</Link>
+          <Link to="/brands" onClick={() => setShowMobileMenu(false)}>Brands</Link>
+          <Link to="/about" onClick={() => setShowMobileMenu(false)}>About Us</Link>
+        </div>
+      )}
 
       <div className="nav-icons">
 

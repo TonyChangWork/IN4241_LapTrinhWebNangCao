@@ -3,7 +3,10 @@ import { useNavigate, Link } from "react-router-dom"
 import { toast } from "react-hot-toast"
 import { userService, orderService } from "../services/api"
 import { formatVND } from "../utils/currency"
+import { User, Lock, Package, LogOut, Camera, MapPin, Phone } from "lucide-react"
 import "./Profile.css"
+
+const formatImg = (url) => (url?.startsWith("/") ? `https://localhost:7178${url}` : (url || "https://via.placeholder.com/150?text=No+Image"));
 
 const STATUS_MAP = {
   pending:   { label: "Chờ xác nhận", color: "#f59e0b" },
@@ -154,9 +157,9 @@ function Profile({ user, onUserUpdated, logout }) {
   if (!user) return null
 
   const TAB_ITEMS = [
-    { key: "info",     icon: "👤", label: "Thông tin cá nhân" },
-    { key: "password", icon: "🔒", label: "Đổi mật khẩu" },
-    { key: "orders",   icon: "📦", label: "Đơn hàng" },
+    { key: "info",     icon: <User size={18} />, label: "Thông tin cá nhân" },
+    { key: "password", icon: <Lock size={18} />, label: "Đổi mật khẩu" },
+    { key: "orders",   icon: <Package size={18} />, label: "Đơn hàng" },
   ]
 
   return (
@@ -193,7 +196,7 @@ function Profile({ user, onUserUpdated, logout }) {
             </div>
           )}
           <div className="profile-avatar-overlay">
-            <span style={{ fontSize: "20px" }}>📷</span>
+            <Camera size={22} />
           </div>
         </label>
 
@@ -216,7 +219,7 @@ function Profile({ user, onUserUpdated, logout }) {
           style={{ color: "#ef4444", marginTop: "auto" }}
           onClick={() => { logout(); navigate("/") }}
         >
-          <span className="nav-icon">🚪</span>
+          <span className="nav-icon"><LogOut size={18} /></span>
           Đăng xuất
         </button>
       </aside>
@@ -380,18 +383,18 @@ function Profile({ user, onUserUpdated, logout }) {
                       {isOpen && (
                         <div className="oh-card-body">
                           <div className="oh-info-row">
-                            <span>📍 {order.address || "—"}</span>
-                            <span>📞 {order.phone || "—"}</span>
+                            <span style={{display: 'flex', alignItems: 'center', gap: '4px'}}><MapPin size={14} /> {order.address || "—"}</span>
+                            <span style={{display: 'flex', alignItems: 'center', gap: '4px'}}><Phone size={14} /> {order.phone || "—"}</span>
                           </div>
                           <div className="oh-items">
                             {order.items?.map(item => (
                               <div key={item.id} className="oh-item">
                                 {item.product && (
-                                  <img src={item.product.image} alt={item.product.name} />
+                                  <img src={formatImg(item.product.image || item.product.Image)} alt={item.product.name || item.product.Name} />
                                 )}
                                 <div className="oh-item-info">
                                   <p className="oh-item-name">
-                                    {item.product?.name || "Sản phẩm"}
+                                    {item.product?.name || item.product?.Name || "Sản phẩm"}
                                   </p>
                                   <p className="oh-item-meta">
                                     Size: {item.shoeSize ?? item.ShoeSize ?? "—"}

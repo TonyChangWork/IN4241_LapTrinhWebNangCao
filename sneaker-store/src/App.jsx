@@ -13,16 +13,18 @@ import OrderHistory from "./pages/OrderHistory"
 import Profile from "./pages/Profile"
 import Products from "./pages/Products"
 import Brands from "./pages/Brands"
+import AboutUs from "./pages/AboutUs"
 import NotFound from "./pages/NotFound"
 import TrustSection from "./components/TrustSection"
 import PromoBanner from "./components/PromoBanner"
-import CategoryList from "./components/CategoryList"
+import { Flame, Sparkles } from "lucide-react"
+
 import { Toaster, toast } from "react-hot-toast"
 import { productService } from "./services/api"
 import fallbackProducts from "./data/products"
 
 function App() {
-  const [brandFilter, setBrandFilter] = useState("All")
+
   const [searchTerm, setSearchTerm] = useState("")
 
   // Cart: load từ localStorage khi khởi động
@@ -160,12 +162,11 @@ function App() {
             <div className="home-content">
               <Hero />
 
-              <CategoryList onSelect={setBrandFilter} />
 
               {/* Flash Sale Section */}
               {products.some(p => p.oldPrice && p.oldPrice > p.price) && (
                 <div className="section-container sale-section" style={{ padding: "40px 60px" }}>
-                  <h2 style={{ fontSize: "24px", fontWeight: "800", marginBottom: "20px" }}>🔥 FLASH SALE</h2>
+                  <h2 style={{ fontSize: "24px", fontWeight: "800", marginBottom: "20px", display: "flex", alignItems: "center", gap: "8px" }}><Flame size={28} color="#ef4444" /> FLASH SALE</h2>
                   <div style={{
                     display: "grid",
                     gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
@@ -191,7 +192,7 @@ function App() {
 
               {/* New Arrivals */}
               <div className="section-container" style={{ padding: "40px 60px" }}>
-                <h2 style={{ fontSize: "24px", fontWeight: "800", marginBottom: "20px" }}>✨ NEW ARRIVALS</h2>
+                <h2 style={{ fontSize: "24px", fontWeight: "800", marginBottom: "20px", display: "flex", alignItems: "center", gap: "8px" }}><Sparkles size={28} color="#f59e0b" /> NEW ARRIVALS</h2>
                 <div style={{
                   display: "grid",
                   gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
@@ -251,6 +252,7 @@ function App() {
           <Route path="/profile" element={<Profile user={user} onUserUpdated={(u) => { setUser(u); localStorage.setItem("user", JSON.stringify(u)) }} logout={logout} />} />
           <Route path="/products" element={<Products products={products} />} />
           <Route path="/brands" element={<Brands products={products} />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -3,6 +3,8 @@ import { useState, useEffect } from "react"
 import "./ProductDetail.css"
 import { formatVND } from "../utils/currency"
 import { productService } from "../services/api"
+import ProductReviews from "../components/ProductReviews"
+import { Truck, RefreshCcw, ShieldCheck } from "lucide-react"
 const SIZES = [36, 37, 38, 39, 40, 41, 42, 43, 44, 45]
 
 function ProductDetail({ addToCart, products = [] }) {
@@ -191,12 +193,14 @@ function ProductDetail({ addToCart, products = [] }) {
           </div>
 
           <div className="pd-features">
-            <div className="pd-feature"><span>🚚</span><span>Miễn phí vận chuyển toàn quốc</span></div>
-            <div className="pd-feature"><span>↩️</span><span>Đổi trả trong 30 ngày</span></div>
-            <div className="pd-feature"><span>✅</span><span>Sản phẩm chính hãng 100%</span></div>
+            <div className="pd-feature"><Truck size={18} /> <span>Miễn phí vận chuyển toàn quốc</span></div>
+            <div className="pd-feature"><RefreshCcw size={18} /> <span>Đổi trả trong 30 ngày</span></div>
+            <div className="pd-feature"><ShieldCheck size={18} /> <span>Sản phẩm chính hãng 100%</span></div>
           </div>
         </div>
       </div>
+      
+      <ProductReviews productId={product.id} />
     </div>
   )
 }

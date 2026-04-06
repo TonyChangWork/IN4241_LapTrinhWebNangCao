@@ -3,7 +3,6 @@
   display: flex;
   min-height: calc(100vh - 70px);
   background: #f8f9fa;
-  font-family: 'Inter', sans-serif;
 }
 
 /* Sidebar */
